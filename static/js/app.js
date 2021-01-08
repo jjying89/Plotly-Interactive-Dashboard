@@ -57,7 +57,6 @@ d3.json("../../samples.json").then((data) => {
     // show bubble chart    
     Plotly.newPlot("bubble", bubbleData);
 
-
     // set up demographic info
     var demoinfo = d3.select("#sample-metadata");
     var keys = Object.keys(data.metadata[id]);
@@ -66,13 +65,10 @@ d3.json("../../samples.json").then((data) => {
     // clear previous info
     demoinfo.html("");
 
+    // display demographic info
     for (var i = 0; i < keys.length; i++) {
       demoinfo.append("p").text(`${keys[i]}: ${values[i]}`);
-    
     };
-    
-      
-
   };
     
   // show default plots (id 940)
@@ -82,12 +78,14 @@ d3.json("../../samples.json").then((data) => {
   d3.selectAll("#selDataset").on("change", updatePage);
 
   function updatePage() {
-      
+    
+    // set variables for dropdown menu
     var dropdownMenu = d3.select("#selDataset");
     var dropdownMenuID = dropdownMenu.property("value");
       
     // console.log(dropdownMenuID);
     
+    // display selected id
     for (var i = 0; i < names.length; i++) {
       if (dropdownMenuID === names[i]) {
         idInfo(i);
@@ -95,7 +93,6 @@ d3.json("../../samples.json").then((data) => {
       };
     };
   };
-
 });
 
 
