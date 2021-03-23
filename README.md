@@ -5,10 +5,7 @@
 ## Goal
 This challenge was to build an interactive dashboard to explore the [Belly Button Biodiversity dataset](http://robdunnlab.com/projects/belly-button-biodiversity/), which catalogs the microbes that colonize human navels.
 
-## Results
-Check it out at: https://jjying89.github.io/
-
-## Screenshots
+## Results and screenshots
 
 <img src="https://github.com/jjying89/plotly/blob/main/static/images/demo.PNG">
 
